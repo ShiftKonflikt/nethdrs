@@ -31,12 +31,12 @@ struct __attribute__((packed)) ip4_hdr
 	unsigned char	version:4,ihl:4;	
 #endif
 unsigned char qos;
-unsigned short tot_len ;
-unsigned short Identification ;
+unsigned char tot_len[2] ;
+unsigned char Identification[2] ;
 unsigned char fragmentdat[2] ;
 unsigned char TTL;
 unsigned char Protocol;
-unsigned char checksum[2];
+unsigned short checksum;
 unsigned char source[4],destination[4];
 };
 
