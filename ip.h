@@ -1,5 +1,5 @@
-#ifndef nethders_h
-#define nethders_h
+#ifndef ip_h
+#define ip_h
 #include <sys/cdefs.h>
 /*
     0                   1                   2                   3
@@ -18,8 +18,19 @@
    |                    Options                    |    Padding    |
    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+*/
 
-
-
+//congestion   
+#define NECT 0
+#define ECT0 2
+#define ECN1 1
+#define CE   3
+//proto
+#define ICMP  1
+#define IGMP  2
+#define TCP   6
+#define UDP   17
+#define ENCAP 41
+#define OSPF  89
+#define SCTP  132
 
 
 struct __attribute__((packed)) ip4_hdr 
